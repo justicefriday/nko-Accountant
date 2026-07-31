@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Statistics from './components/Statistics'
-import About from './components/About'
+// import About from './components/About'
 import Services from './components/Services'
 import WhyChooseUs from './components/WhyChooseUs'
 import Process from './components/Process'
@@ -18,7 +18,7 @@ const App = () => {
         <Nav />
           <Hero />
            <Statistics />
-           <About />
+           {/* <About /> */}
 
           <Services />
           <WhyChooseUs />

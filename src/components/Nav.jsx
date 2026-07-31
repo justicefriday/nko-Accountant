@@ -90,7 +90,7 @@ const Nav = () => {
           rel="noreferrer"
           className="hidden lg:flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
         >
-          Get Started
+           Request Consultation
         </a>
 
         {/* Mobile Icon */}
@@ -171,7 +171,7 @@ const Nav = () => {
             className="block text-center bg-red-600 hover:bg-red-700 text-white py-4 rounded-xl font-semibold transition"
             
           >
-            Get Started
+            Request Consultation
           </a>
 
         </div>

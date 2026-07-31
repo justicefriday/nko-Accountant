@@ -64,6 +64,8 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaPlay, FaShieldAlt } from "react-icons/fa";
 import { fadeUp } from "../utils/animation";
 import heroImage from "../image/hero2.jpg";
+import { Link } from "react-scroll";
+
 
 const Hero = () => {
   return (
@@ -99,25 +101,33 @@ const Hero = () => {
               business grow with confidence.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 mt-10">
+           <div className="flex flex-col sm:flex-row gap-5 mt-10">
 
-              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105">
+  {/* Contact */}
+  <Link
+    to="contact"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+  >
+    Request a Consultation
+    <FaArrowRight />
+  </Link>
 
-                Get Started
+  {/* Services */}
+  <Link
+    to="services"
+    smooth={true}
+    duration={600}
+    offset={-80}
+    className="cursor-pointer border border-white text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105"
+  >
+    <FaPlay />
+    Explore Our Services
+  </Link>
 
-                <FaArrowRight />
-
-              </button>
-
-              <button className="border border-white text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105">
-
-                <FaPlay />
-
-                Learn More
-
-              </button>
-
-            </div>
+</div>
 
           </motion.div>
 

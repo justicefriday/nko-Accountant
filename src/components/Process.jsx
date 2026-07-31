@@ -3,6 +3,8 @@ import process from "../data/process";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { fadeUp } from "../utils/animation";
+import { Link } from "react-scroll";
+
 
 const Process = () => {
   return (
@@ -132,13 +134,16 @@ const Process = () => {
 
           </p>
 
-          <button className="mt-10 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-xl flex items-center gap-3 mx-auto transition-all duration-300 hover:scale-105">
-
-            Book a Free Consultation
-
-            <FaArrowRight />
-
-          </button>
+          <Link
+  to="contact"
+  smooth={true}
+  duration={600}
+  offset={-80}
+  className="mt-10 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 mx-auto cursor-pointer transition-all duration-300 hover:scale-105 w-fit"
+>
+  Book a Free Consultation
+  <FaArrowRight />
+</Link>
 
         </motion.div>
 
