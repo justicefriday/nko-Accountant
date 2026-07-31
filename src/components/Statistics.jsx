@@ -1,4 +1,4 @@
-import statistics from "../data/statistics";
+import Statistics from "../data/Statistics";
 
 const Statistics = () => {
   return (
