@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import WhyChooseUs from "../data/WhyChooseUs";
+import whyChooseUs from "../data/whyChooseUs";
 
 const WhyChooseUs = () => {
   return (

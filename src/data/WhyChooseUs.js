@@ -5,7 +5,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 
-const WhyChooseUs = [
+const whyChooseUs = [
   {
     id: 1,
     icon: FaShieldAlt,
@@ -32,4 +32,4 @@ const WhyChooseUs = [
   },
 ];
 
-export default WhyChooseUs;
+export default whyChooseUs;
