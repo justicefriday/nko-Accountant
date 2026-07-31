@@ -85,20 +85,18 @@ const Hero = () => {
             </span>
 
             <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-8">
-              Smart Accounting
+              Professional Accounting
 
               <span className="block text-red-500">
-                For Modern
+                Solution 
               </span>
 
-              Businesses
+              You can Trust
             </h1>
 
             <p className="text-gray-300 mt-8 text-base md:text-lg leading-8 max-w-xl">
-              Professional bookkeeping, GST/HST filing,
-              personal tax returns, corporate tax services,
-              and financial reporting designed to help your
-              business grow with confidence.
+              We help individuals and businesses manage their finances with accuracy, compliance,
+               and confidence through bookkeeping, tax filling, and financial reconciliation.
             </p>
 
            <div className="flex flex-col sm:flex-row gap-5 mt-10">
