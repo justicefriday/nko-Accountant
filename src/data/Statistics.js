@@ -5,7 +5,7 @@ import {
   FaAward,
 } from "react-icons/fa";
 
-const Statistics = [
+const statistics = [
   {
     id: 1,
     icon: FaBriefcase,
@@ -32,4 +32,4 @@ const Statistics = [
   },
 ];
 
-export default Statistics;
+export default statistics;
