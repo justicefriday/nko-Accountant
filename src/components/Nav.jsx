@@ -40,10 +40,8 @@ const Nav = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white shadow-lg py-3"
-          : "bg-transparent py-5"
+      className={`fixed top-0 left-0 w-full z-50 bg-white transition-shadow duration-500 ${
+        scrolled ? "shadow-lg py-3" : "shadow-sm py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -78,11 +76,7 @@ const Nav = () => {
                 duration={500}
                 offset={-90}
                 activeClass="text-[#C9A227]"
-                className={`cursor-pointer font-medium transition-all duration-300 ${
-                  scrolled
-                    ? "text-[#0B1F3A] hover:text-[#C9A227]"
-                    : "text-white hover:text-[#C9A227]"
-                }`}
+                className="cursor-pointer font-medium text-[#0B1F3A] hover:text-[#C9A227] transition-all duration-300"
               >
                 {link.name}
               </Link>
@@ -108,9 +102,7 @@ const Nav = () => {
 
         <button
           onClick={() => setNav(true)}
-          className={`lg:hidden text-3xl z-[70] ${
-            scrolled ? "text-[#0B1F3A]" : "text-white"
-          }`}
+          className="lg:hidden text-3xl z-[70] text-[#0B1F3A]"
         >
           <FaBars />
         </button>
@@ -122,9 +114,7 @@ const Nav = () => {
       <div
         onClick={() => setNav(false)}
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-all duration-500 lg:hidden ${
-          nav
-            ? "opacity-100 visible z-[60]"
-            : "opacity-0 invisible"
+          nav ? "opacity-100 visible z-[60]" : "opacity-0 invisible"
         }`}
       />
 
