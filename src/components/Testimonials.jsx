@@ -113,9 +113,9 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gray-50 overflow-hidden"
+      className="py-16 lg:py-20 bg-[#F8FAFC] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
         {/* Heading */}
 
@@ -124,41 +124,42 @@ const Testimonials = () => {
           className="text-center max-w-3xl mx-auto"
         >
 
-          <span className="uppercase tracking-[4px] text-red-600 font-semibold text-sm">
+          <span className="uppercase tracking-[3px] text-[#C8A24A] font-semibold text-sm">
 
             Testimonials
 
           </span>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
 
             What Our Clients Say
 
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-8">
+          <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
 
-            Businesses trust N.K.O Accounting for reliable
-            bookkeeping, tax and accounting services.
+            Our commitment to professionalism, accuracy and
+            exceptional client service has earned the trust of
+            businesses and individuals across Canada.
 
           </p>
 
         </motion.div>
 
-        {/* Swiper */}
+        {/* Slider */}
 
-        <div className="mt-16">
+       <div className="mt-10 lg:mt-12">
 
           <Swiper
             modules={[Autoplay, Pagination]}
             autoplay={{
-              delay: 4000,
+              delay: 4500,
               disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,
             }}
-            spaceBetween={30}
+            spaceBetween={25}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -166,7 +167,7 @@ const Testimonials = () => {
               768: {
                 slidesPerView: 2,
               },
-              1024: {
+              1200: {
                 slidesPerView: 3,
               },
             }}
@@ -174,26 +175,37 @@ const Testimonials = () => {
 
             {testimonials.map((item) => (
 
-              <SwiperSlide key={item.id}>
+              <SwiperSlide
+                key={item.id}
+                className="h-auto"
+              >
 
                 <motion.div
                   whileHover={{
                     y: -8,
                   }}
-                  className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full flex flex-col"
-                >
-
+                  transition={{
+                    duration: .3,
+                  }}
+                 className="bg-white rounded-3xl border border-gray-200 hover:border-[#C8A24A] shadow-lg hover:shadow-2xl p-6 lg:p-7 h-full flex flex-col">
                   {/* Quote */}
 
-                  <FaQuoteLeft className="text-red-600 text-3xl mb-6"/>
+                  <div className="w-14 h-14 rounded-2xl bg-[#EEF4FB] flex items-center justify-center">
+
+                    <FaQuoteLeft className="text-[#C8A24A] text-2xl"/>
+
+                  </div>
 
                   {/* Stars */}
 
-                  <div className="flex gap-1 text-yellow-400 mb-6">
+                   <div className="flex gap-1 mt-4">
 
                     {[...Array(5)].map((_, index) => (
 
-                      <FaStar key={index}/>
+                      <FaStar
+                        key={index}
+                        className="text-[#C8A24A]"
+                      />
 
                     ))}
 
@@ -201,31 +213,35 @@ const Testimonials = () => {
 
                   {/* Review */}
 
-                  <p className="text-gray-600 leading-8 italic flex-grow">
+                 <p className="mt-4 text-gray-600 leading-7 italic flex-grow">
 
                     "{item.review}"
 
                   </p>
 
-                  {/* User */}
+                  {/* Divider */}
 
-                  <div className="flex items-center gap-4 mt-8">
+                  <div className="w-full h-px bg-gray-200 my-6"></div>
+
+                  {/* Client */}
+
+                  <div className="flex items-center gap-4">
 
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-16 h-16 rounded-full object-cover border-4 border-red-100"
+                      className="w-16 h-16 rounded-full border-4 border-[#EEF4FB] object-cover flex-shrink-0"
                     />
 
                     <div>
 
-                      <h4 className="font-bold text-blue-950">
+                      <h4 className="font-bold text-[#0B2341]">
 
                         {item.name}
 
                       </h4>
 
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-sm text-[#C8A24A] font-medium mt-1">
 
                         {item.company}
 

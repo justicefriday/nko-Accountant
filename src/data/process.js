@@ -10,25 +10,25 @@ const process = [
     id: 1,
     icon: FaComments,
     title: "Free Consultation",
-    text: "We begin by understanding your accounting and tax needs, then recommend the best solution for you.",
+    text: "We begin by understanding your accounting and tax needs and recommend the most suitable solution.",
   },
   {
     id: 2,
     icon: FaClipboardList,
     title: "Document Collection",
-    text: "Securely provide your financial records and supporting documents for review.",
+    text: "Securely share your financial records and supporting documents for review.",
   },
   {
     id: 3,
     icon: FaCalculator,
     title: "Professional Processing",
-    text: "Our team prepares your bookkeeping, tax filings, and financial reports accurately and on time.",
+    text: "We accurately prepare your bookkeeping, tax filings and financial reports.",
   },
   {
     id: 4,
     icon: FaCheckCircle,
-    title: "Delivery & Support",
-    text: "Receive your completed work with ongoing support whenever you need professional guidance.",
+    title: "Delivery & Ongoing Support",
+    text: "Receive your completed work with continued professional guidance whenever you need it.",
   },
 ];
 

@@ -10,7 +10,8 @@ import {
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { fadeUp } from "../utils/animation";
-import logo from "../image/logo.jpeg";
+import logo from "../image/logo.png";
+
 const Footer = () => {
   const services = [
     "Bookkeeping",
@@ -29,28 +30,34 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-950 text-white">
+    <footer className="bg-[#071B34] text-white">
 
       {/* CTA */}
 
       <motion.div
         {...fadeUp}
-        className="max-w-7xl mx-auto px-6 pt-16"
+        className="max-w-7xl mx-auto px-5 sm:px-6 pt-20"
       >
 
-        <div className="bg-red-600 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="rounded-[32px] bg-[#C8A24A] px-8 py-10 lg:px-14 lg:py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
 
           <div className="text-center lg:text-left">
 
-            <h2 className="text-3xl lg:text-4xl font-bold">
+            <span className="uppercase tracking-widest text-sm text-[#0B2341] font-semibold">
 
-              Ready To Grow Your Business?
+              Ready to Get Started?
+
+            </span>
+
+            <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#0B2341]">
+
+              Let's Simplify Your Accounting
 
             </h2>
 
-            <p className="mt-3 text-red-100">
+            <p className="mt-3 text-[#2b2b2b] max-w-xl">
 
-              Let's simplify your accounting and taxes today.
+              Speak with our experienced accounting professionals today.
 
             </p>
 
@@ -61,9 +68,9 @@ const Footer = () => {
             smooth={true}
             duration={600}
             offset={-80}
-            className="cursor-pointer bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-950 hover:text-white transition-all duration-300"
+            className="cursor-pointer bg-[#0B2341] hover:bg-[#14375c] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg"
           >
-            Contact Us
+            Request Consultation
           </Link>
 
         </div>
@@ -72,9 +79,9 @@ const Footer = () => {
 
       {/* Main Footer */}
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 py-20">
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12">
 
           {/* Company */}
 
@@ -86,11 +93,11 @@ const Footer = () => {
               className="h-16 bg-white rounded-xl p-2"
             />
 
-            <p className="text-gray-300 mt-6 leading-8">
+            <p className="mt-6 text-gray-300 leading-8">
 
-              Professional bookkeeping, tax filing and accounting
-              services helping businesses across Canada stay
-              compliant and financially organized.
+              Professional bookkeeping, taxation and accounting
+              services helping businesses and individuals stay
+              financially organized and compliant.
 
             </p>
 
@@ -101,11 +108,9 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="w-11 h-11 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center transition-all duration-300"
+                  className="w-11 h-11 rounded-full border border-white/20 hover:border-[#C8A24A] hover:bg-[#C8A24A] hover:text-[#0B2341] flex items-center justify-center transition-all duration-300"
                 >
-
                   <Icon />
-
                 </a>
 
               ))}
@@ -118,23 +123,21 @@ const Footer = () => {
 
           <div>
 
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-2xl font-bold text-white mb-6">
 
               Services
 
             </h3>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4">
 
               {services.map((service) => (
 
                 <li
                   key={service}
-                  className="hover:text-red-400 transition cursor-pointer"
+                  className="text-gray-300 hover:text-[#C8A24A] transition cursor-pointer"
                 >
-
                   {service}
-
                 </li>
 
               ))}
@@ -164,11 +167,9 @@ const Footer = () => {
                     smooth={true}
                     duration={600}
                     offset={-80}
-                    className="cursor-pointer text-gray-300 hover:text-red-400 transition"
+                    className="cursor-pointer text-gray-300 hover:text-[#C8A24A] transition"
                   >
-
                     {link.name}
-
                   </Link>
 
                 </li>
@@ -191,27 +192,33 @@ const Footer = () => {
 
             <div className="space-y-5">
 
-              <div className="flex items-start gap-4">
+              <div className="flex gap-4">
 
-                <FaPhoneAlt className="text-red-500 mt-1"/>
+                <FaPhoneAlt className="text-[#C8A24A] mt-1 flex-shrink-0"/>
 
-                <span>+1 (416) 666-5694</span>
-
-              </div>
-
-              <div className="flex items-start gap-4">
-
-                <FaEnvelope className="text-red-500 mt-1"/>
-
-                <span>info@nkoaccounting.ca</span>
+                <span className="text-gray-300">
+                  +1 (416) 666-5694
+                </span>
 
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex gap-4">
 
-                <FaMapMarkerAlt className="text-red-500 mt-1"/>
+                <FaEnvelope className="text-[#C8A24A] mt-1 flex-shrink-0"/>
 
-                <span>Toronto, Ontario, Canada</span>
+                <span className="text-gray-300">
+                  info@nkoaccounting.ca
+                </span>
+
+              </div>
+
+              <div className="flex gap-4">
+
+                <FaMapMarkerAlt className="text-[#C8A24A] mt-1 flex-shrink-0"/>
+
+                <span className="text-gray-300">
+                  Toronto, Ontario, Canada
+                </span>
 
               </div>
 
@@ -227,19 +234,19 @@ const Footer = () => {
 
       <div className="border-t border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-5">
 
-          <p className="text-gray-400 text-center">
+          <p className="text-gray-400 text-center text-sm">
 
-            © {new Date().getFullYear()} N.K.O Accounting Professional Corporation. All Rights Reserved.
+            © {new Date().getFullYear()} N.K.O Accounting Professional Corporation. All rights reserved.
 
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
 
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm">
 
-              Designed & Developed by <span className="text-red-500">Future Coders</span>
+              Designed by <span className="text-[#C8A24A] font-semibold">Future Coders</span>
 
             </p>
 
@@ -247,7 +254,7 @@ const Footer = () => {
               to="home"
               smooth={true}
               duration={600}
-              className="cursor-pointer w-11 h-11 rounded-full bg-red-600 hover:bg-white hover:text-red-600 flex items-center justify-center transition-all duration-300"
+              className="cursor-pointer w-11 h-11 rounded-full bg-[#C8A24A] hover:bg-white text-[#0B2341] flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
             >
 
               <FaArrowUp />

@@ -4,131 +4,159 @@ import {
   FaCheckCircle,
   FaShieldAlt,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 import { fadeUp } from "../utils/animation";
 import aboutImage from "../image/pics.jpg";
 
 const features = [
   "Professional Bookkeeping",
   "GST/HST Filing",
-  "Corporate Tax Returns",
   "Personal Tax Returns",
+  "Corporate Tax Returns",
 ];
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-24 md:py-32 bg-white overflow-hidden"
+       className="py-20 lg:py-28 bg-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* IMAGE */}
+          {/* LEFT */}
+
+     <motion.div
+  {...fadeUp}
+  className="relative order-2 lg:order-1 pb-24 lg:pb-0"
+>
+  <div className="relative max-w-xl mx-auto">
+
+    {/* Gold Accent */}
+    <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-full h-full rounded-3xl bg-[#C8A24A]"></div>
+
+    {/* Image */}
+    <img
+      src={aboutImage}
+      alt="N.K.O Accounting"
+      className="relative z-10 w-full h-auto rounded-3xl shadow-2xl object-cover"
+    />
+
+    {/* Since Badge */}
+    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 bg-white rounded-xl shadow-lg px-4 py-3">
+
+      <p className="text-[11px] uppercase tracking-widest text-[#C8A24A] font-semibold">
+        Since
+      </p>
+
+      <h3 className="text-xl sm:text-2xl font-bold text-[#0B2341]">
+        2010
+      </h3>
+
+    </div>
+
+    {/* Floating Card */}
+
+    <div
+      className="
+        absolute
+        left-1/2
+        -translate-x-1/2
+        -bottom-16
+        lg:left-8
+        lg:translate-x-0
+        lg:-bottom-10
+        z-20
+        bg-white
+        rounded-2xl
+        shadow-2xl
+        p-5
+        w-[92%]
+        sm:w-[360px]
+      "
+    >
+
+      <div className="flex items-start gap-4">
+
+        <div className="w-14 h-14 rounded-xl bg-[#0B2341] flex items-center justify-center flex-shrink-0">
+
+          <FaShieldAlt className="text-white text-2xl" />
+
+        </div>
+
+        <div>
+
+          <h3 className="font-bold text-[#0B2341] text-lg">
+            Trusted Financial Partner
+          </h3>
+
+          <p className="text-sm text-gray-500 mt-1 leading-6">
+            Delivering accurate accounting and tax solutions with integrity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</motion.div>
+
+          {/* RIGHT */}
 
           <motion.div
             {...fadeUp}
-            className="relative flex justify-center order-2 lg:order-1"
+            className="order-1 lg:order-2"
           >
 
-            <div className="relative w-full max-w-lg">
-
-              {/* Background Decoration */}
-
-              <div className="absolute -top-8 -left-8 w-48 h-48 bg-red-100 rounded-full blur-3xl opacity-50"></div>
-
-              <img
-                src={aboutImage}
-                alt="N.K.O Accounting"
-                className="relative rounded-3xl shadow-2xl w-full object-cover z-10"
-              />
-
-              {/* Floating Trust Card */}
-
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 lg:left-8 lg:translate-x-0 bg-blue-950 text-white rounded-2xl shadow-2xl px-6 py-5 flex items-center gap-4 w-[90%] sm:w-auto z-20">
-
-                <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-
-                  <FaShieldAlt className="text-2xl"/>
-
-                </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold">
-
-                    Trusted Service
-
-                  </h3>
-
-                  <p className="text-sm text-gray-300">
-
-                    Serving businesses with confidence
-
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-          {/* CONTENT */}
-
-          <motion.div
-            {...fadeUp}
-            className="order-1 lg:order-2 text-center lg:text-left"
-          >
-
-            <span className="uppercase tracking-[4px] text-red-600 font-semibold text-sm">
+            <span className="uppercase tracking-[4px] text-[#C8A24A] font-semibold text-sm">
 
               About Us
 
             </span>
 
-            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950 leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
 
-              Trusted Accounting
+              Helping Businesses
               <br />
-              For Your Business
+
+              Grow With Confidence
 
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-8 max-w-xl mx-auto lg:mx-0">
+            <p className="mt-8 text-gray-600 leading-8">
 
-              We help businesses and individuals stay financially
-              organized through reliable bookkeeping, tax filing
-              and accounting services.
-
-            </p>
-
-            <p className="mt-4 text-gray-600 leading-8 max-w-xl mx-auto lg:mx-0">
-
-              Our goal is to simplify your finances so you can
-              focus on growing your business with confidence.
+              N.K.O Accounting Professional Corporation provides reliable
+              bookkeeping, tax preparation and financial reporting services
+              designed to help individuals and businesses stay compliant,
+              organized and financially confident.
 
             </p>
 
-            {/* FEATURES */}
+            <p className="mt-5 text-gray-600 leading-8">
 
-            <div className="grid sm:grid-cols-2 gap-5 mt-10">
+              We believe every client deserves personalized service,
+              accurate reporting and professional advice that supports
+              long-term financial success.
+
+            </p>
+
+            {/* Features */}
+
+            <div className="grid sm:grid-cols-2 gap-y-6 gap-x-10 mt-10">
 
               {features.map((feature) => (
 
                 <div
                   key={feature}
-                  className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:bg-red-50 transition-all duration-300 shadow-sm"
+                  className="flex items-center gap-3"
                 >
 
-                  <div className="w-11 h-11 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="text-[#C8A24A] text-xl"/>
 
-                    <FaCheckCircle className="text-red-600"/>
-
-                  </div>
-
-                  <span className="text-blue-950 font-semibold text-sm sm:text-base leading-6">
+                  <span className="text-[#0B2341] font-medium">
 
                     {feature}
 
@@ -140,37 +168,83 @@ const About = () => {
 
             </div>
 
-            {/* CTA CARD */}
+            {/* Statistics */}
 
-            <div className="mt-10 bg-gradient-to-r from-blue-950 to-blue-900 rounded-3xl p-6 text-white shadow-xl">
+            <div className="grid grid-cols-3 gap-6 mt-12 py-8 border-y border-gray-200 text-center"> 
 
-              <h3 className="text-2xl font-bold">
+              <div>
 
-                Accurate Accounting.
-                Trusted Support.
+                <h3 className="text-3xl font-bold text-[#0B2341]">
 
-              </h3>
+                  15+
 
-              <p className="text-gray-300 mt-3 leading-7">
+                </h3>
 
-                Helping individuals and businesses make smarter
-                financial decisions every day.
+                <p className="text-gray-500 mt-2 text-sm">
 
-              </p>
+                  Years Experience
+
+                </p>
+
+              </div> 
+
+               <div>
+
+                <h3 className="text-3xl font-bold text-[#0B2341]">
+
+                  500+
+
+                </h3>
+
+                <p className="text-gray-500 mt-2 text-sm">
+
+                  Happy Clients
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <h3 className="text-3xl font-bold text-[#0B2341]">
+
+                  1000+
+
+                </h3>
+
+                <p className="text-gray-500 mt-2 text-sm">
+
+                  Tax Returns
+
+                </p>
+
+              </div> 
 
             </div>
 
-            {/* BUTTON */}
+            {/* Button */}
 
             <div className="mt-10 flex justify-center lg:justify-start">
 
-              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 hover:scale-105">
+             <Link to="contact" smooth={true} duration={600}  offset={-80} className=" inline-flex items-center gap-3 px-8
+    py-4
+    rounded-xl
+    bg-[#0B2341]
+    hover:bg-[#16385C]
+    text-white
+    font-semibold
+    shadow-lg
+    transition-all
+    duration-300
+    hover:-translate-y-1
+"
+>
 
-                Book a Consultation
+Request Consultation
 
-                <FaArrowRight/>
+<FaArrowRight />
 
-              </button>
+</Link>
 
             </div>
 

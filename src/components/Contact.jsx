@@ -9,12 +9,35 @@ import {
 import { fadeUp } from "../utils/animation";
 
 const Contact = () => {
+  const contactInfo = [
+    {
+      icon: <FaPhoneAlt />,
+      title: "Phone",
+      text: "+1 (416) 666-5694",
+    },
+    {
+      icon: <FaEnvelope />,
+      title: "Email",
+      text: "info@nkoaccounting.ca",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "Office",
+      text: "Toronto, Ontario, Canada",
+    },
+    {
+      icon: <FaClock />,
+      title: "Business Hours",
+      text: "Monday - Friday • 9:00 AM - 5:00 PM",
+    },
+  ];
+
   return (
     <section
       id="contact"
-      className="py-24 bg-gradient-to-br from-gray-50 to-white"
+      className="py-20 lg:py-28 bg-[#F8FAFC]"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
         {/* Heading */}
 
@@ -23,67 +46,48 @@ const Contact = () => {
           className="text-center max-w-3xl mx-auto"
         >
 
-          <span className="uppercase tracking-[4px] text-red-600 font-semibold text-sm">
+          <span className="uppercase tracking-[3px] text-[#C8A24A] font-semibold text-sm">
 
             Contact Us
 
           </span>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
 
             Let's Discuss Your
-            Accounting Needs
+            Financial Needs
 
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-8">
+          <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
 
-            Need bookkeeping, tax filing or accounting services?
-            Reach out today and we'll be happy to help.
+            Whether you need bookkeeping, tax services or accounting
+            support, our team is ready to help.
 
           </p>
 
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-14 mt-20">
+        {/* Content */}
 
-          {/* LEFT */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mt-16">
+
+          {/* Left */}
 
           <motion.div
             {...fadeUp}
             className="space-y-6"
           >
 
-            {[
-              {
-                icon: <FaPhoneAlt />,
-                title: "Call Us",
-                text: "+1 (416) 666-5694",
-              },
-              {
-                icon: <FaEnvelope />,
-                title: "Email",
-                text: "info@nkoaccounting.ca",
-              },
-              {
-                icon: <FaMapMarkerAlt />,
-                title: "Office",
-                text: "Toronto, Ontario, Canada",
-              },
-              {
-                icon: <FaClock />,
-                title: "Working Hours",
-                text: "Mon - Fri | 9:00 AM - 5:00 PM",
-              },
-            ].map((item, index) => (
+            {contactInfo.map((item, index) => (
 
               <motion.div
                 key={index}
-                whileHover={{ x: 8 }}
-                className="bg-white rounded-2xl shadow-lg p-6 flex items-center gap-5 hover:border-red-500 border border-transparent transition-all duration-300"
+                whileHover={{ x: 6 }}
+                className="flex items-center gap-5 bg-white rounded-3xl p-6 border border-gray-200 hover:border-[#C8A24A] shadow-md hover:shadow-xl transition-all duration-300"
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center text-red-600 text-2xl flex-shrink-0">
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF4FB] flex items-center justify-center text-[#0B2341] text-2xl flex-shrink-0">
 
                   {item.icon}
 
@@ -91,13 +95,13 @@ const Contact = () => {
 
                 <div>
 
-                  <h3 className="font-bold text-blue-950 text-xl">
+                  <h3 className="text-lg font-bold text-[#0B2341]">
 
                     {item.title}
 
                   </h3>
 
-                  <p className="text-gray-600 mt-2">
+                  <p className="mt-1 text-gray-600">
 
                     {item.text}
 
@@ -109,14 +113,14 @@ const Contact = () => {
 
             ))}
 
-            {/* Google Map Placeholder */}
+            {/* Map */}
 
-            <div className="overflow-hidden rounded-3xl shadow-xl mt-8">
+            <div className="overflow-hidden rounded-3xl border border-gray-200 shadow-xl">
 
               <iframe
                 title="Google Map"
                 src="https://www.google.com/maps?q=Toronto,Ontario&output=embed"
-                className="w-full h-72 border-0"
+                className="w-full h-72 sm:h-80 border-0"
                 loading="lazy"
               ></iframe>
 
@@ -124,62 +128,63 @@ const Contact = () => {
 
           </motion.div>
 
-          {/* RIGHT */}
+          {/* Right */}
 
-          <motion.div
-            {...fadeUp}
-          >
+          <motion.div {...fadeUp}>
 
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10">
+            <div className="bg-white rounded-3xl border border-gray-200 shadow-2xl p-6 sm:p-8 lg:p-10">
 
-              <h3 className="text-3xl font-bold text-blue-950">
+              <span className="text-[#C8A24A] uppercase font-semibold tracking-wider text-sm">
 
-                Send Us A Message
+                Send a Message
+
+              </span>
+
+              <h3 className="mt-3 text-3xl font-bold text-[#0B2341]">
+
+                We'd Love To Hear From You
 
               </h3>
 
-              <p className="text-gray-600 mt-3 mb-8">
+              <p className="mt-4 text-gray-600 leading-7">
 
-                Fill out the form below and we'll get back to you
-                as soon as possible.
+                Complete the form below and one of our accounting
+                professionals will contact you shortly.
 
               </p>
 
-              <form className="space-y-5">
+              <form className="space-y-5 mt-8">
 
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full rounded-xl border border-gray-300 p-4 focus:border-red-600 outline-none transition"
+                  className="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-[#C8A24A] focus:ring-2 focus:ring-[#C8A24A]/20 outline-none transition"
                 />
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full rounded-xl border border-gray-300 p-4 focus:border-red-600 outline-none transition"
+                  className="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-[#C8A24A] focus:ring-2 focus:ring-[#C8A24A]/20 outline-none transition"
                 />
 
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full rounded-xl border border-gray-300 p-4 focus:border-red-600 outline-none transition"
+                  className="w-full rounded-xl border border-gray-300 px-5 py-4 focus:border-[#C8A24A] focus:ring-2 focus:ring-[#C8A24A]/20 outline-none transition"
                 />
 
                 <textarea
                   rows="6"
-                  placeholder="Tell us about your accounting needs..."
-                  className="w-full rounded-xl border border-gray-300 p-4 focus:border-red-600 outline-none transition resize-none"
+                  placeholder="Tell us how we can help..."
+                  className="w-full rounded-xl border border-gray-300 px-5 py-4 resize-none focus:border-[#C8A24A] focus:ring-2 focus:ring-[#C8A24A]/20 outline-none transition"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white rounded-xl py-4 font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:gap-5"
+                  className="w-full bg-[#0B2341] hover:bg-[#16385C] text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1"
                 >
-
                   Send Message
-
                   <FaArrowRight />
-
                 </button>
 
               </form>

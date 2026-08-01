@@ -125,12 +125,13 @@ import services from "../data/services";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { fadeUp } from "../utils/animation";
+import { Link } from "react-scroll";
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-14 lg:py-16 bg-slate-50">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6">
 
         {/* Heading */}
 
@@ -139,24 +140,25 @@ const Services = () => {
           className="text-center max-w-3xl mx-auto"
         >
 
-          <span className="uppercase tracking-[4px] text-red-600 font-semibold text-sm">
+          <span className="uppercase tracking-[3px] text-[#C9A227] font-semibold text-sm">
 
             Our Services
 
           </span>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F3B73] leading-tight">
 
-            Professional Accounting
-            Solutions
+            Accounting Solutions
+            <br />
+            Built Around Your Business
 
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-8">
+          <p className="mt-5 text-gray-600 leading-7 text-base sm:text-lg">
 
-            We provide reliable bookkeeping, tax and accounting
-            services tailored to help individuals and businesses
-            stay financially organized.
+            From bookkeeping to tax planning, we provide dependable
+            financial services that help individuals and businesses
+            stay compliant, organized and prepared for growth.
 
           </p>
 
@@ -164,7 +166,7 @@ const Services = () => {
 
         {/* Cards */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
 
           {services.map((service, index) => {
 
@@ -173,58 +175,60 @@ const Services = () => {
             return (
 
               <motion.div
-                key={service.id}
-                {...fadeUp}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -8,
-                }}
-                className="group relative bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-red-500 transition-all duration-500 overflow-hidden flex flex-col"
-              >
+  key={service.id}
+  {...fadeUp}
+  transition={{
+    duration: 0.5,
+    delay: index * 0.1,
+  }}
+  whileHover={{
+    y: -10,
+  }}
+  className="group relative overflow-hidden bg-white rounded-3xl p-8 shadow-lg border border-gray-200 transition-all duration-500 flex flex-col"
+>
+  {/* Animated Background */}
 
-                {/* Top Border */}
+  <div className="absolute left-0 bottom-0 w-full h-0 bg-[#0B2341] group-hover:h-full transition-all duration-500 ease-in-out z-0"></div>
 
-                <div className="absolute top-0 left-0 h-1 w-0 bg-red-600 group-hover:w-full transition-all duration-500"></div>
+  <div className="relative z-10 flex flex-col h-full">
 
-                {/* Icon */}
+    {/* Icon */}
 
-                <div className="w-20 h-20 rounded-2xl bg-red-100 flex items-center justify-center mx-auto lg:mx-0 group-hover:bg-red-600 transition-all duration-500">
+    <div className="w-20 h-20 rounded-2xl bg-[#EEF4FB] flex items-center justify-center mx-auto lg:mx-0 group-hover:bg-[#C8A24A] transition-all duration-500">
 
-                  <Icon className="text-red-600 text-4xl group-hover:text-white transition-all duration-500"/>
+      <Icon className="text-[#0B2341] text-4xl transition-all duration-500 group-hover:text-[#0B2341]" />
 
-                </div>
+    </div>
 
-                {/* Title */}
+    {/* Title */}
 
-                <h3 className="mt-8 text-2xl font-bold text-blue-950 text-center lg:text-left">
+    <h3 className="mt-8 text-2xl font-bold text-[#0B2341] text-center lg:text-left transition-all duration-500 group-hover:text-white">
 
-                  {service.title}
+      {service.title}
 
-                </h3>
+    </h3>
 
-                {/* Description */}
+    {/* Description */}
 
-                <p className="mt-5 text-gray-600 leading-8 text-center lg:text-left flex-grow">
+    <p className="mt-5 leading-8 text-center lg:text-left flex-grow text-gray-600 transition-all duration-500 group-hover:text-gray-300">
 
-                  {service.description}
+      {service.description}
 
-                </p>
+    </p>
 
-                {/* Button */}
+    {/* Button */}
 
-                <button className="mt-8 flex items-center justify-center lg:justify-start gap-2 text-red-600 font-semibold hover:gap-4 transition-all duration-300">
+    <button className="mt-8 flex items-center justify-center lg:justify-start gap-2 font-semibold text-[#0B2341] transition-all duration-500 group-hover:text-[#C8A24A] hover:gap-4">
 
-                  Learn More
+      Learn More
 
-                  <FaArrowRight/>
+      <FaArrowRight />
 
-                </button>
+    </button>
 
-              </motion.div>
+  </div>
 
+</motion.div>
             );
 
           })}

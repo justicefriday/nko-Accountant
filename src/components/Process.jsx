@@ -1,18 +1,16 @@
-
 import process from "../data/process";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import { fadeUp } from "../utils/animation";
 import { Link } from "react-scroll";
-
+import { fadeUp } from "../utils/animation";
 
 const Process = () => {
   return (
-    <section
-      id="process"
-      className="py-24 bg-gradient-to-br from-slate-50 to-white overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6">
+   <section
+  id="process"
+  className="py-16 lg:py-20 bg-[#F8FAFC] overflow-hidden"
+>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
         {/* Heading */}
 
@@ -21,22 +19,24 @@ const Process = () => {
           className="text-center max-w-3xl mx-auto"
         >
 
-          <span className="uppercase tracking-[4px] text-red-600 font-semibold text-sm">
+          <span className="uppercase tracking-[3px] text-[#C8A24A] font-semibold text-sm">
 
             Our Process
 
           </span>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
 
-            Getting Started Is Easy
+            A Simple Process.
+            <br />
+            Professional Results.
 
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-8">
+          <p className="mt-6 text-gray-600 text-base sm:text-lg leading-8">
 
-            From your first consultation to the final financial report,
-            we make every step simple, transparent and stress-free.
+            We've simplified our workflow to make your accounting
+            experience straightforward, transparent and stress-free.
 
           </p>
 
@@ -44,13 +44,13 @@ const Process = () => {
 
         {/* Timeline */}
 
-        <div className="relative mt-20">
+        <div className="relative mt-16 lg:mt-20">
 
           {/* Desktop Line */}
 
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-1 bg-gray-200 rounded-full"></div>
+          <div className="hidden lg:block absolute top-14 left-[12%] right-[12%] h-[3px] bg-[#C8A24A]/30"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10 relative">
 
             {process.map((step, index) => {
 
@@ -62,18 +62,18 @@ const Process = () => {
                   key={step.id}
                   {...fadeUp}
                   transition={{
-                    duration: 0.5,
-                    delay: index * 0.15,
+                    duration: .5,
+                    delay: index * .15,
                   }}
                   whileHover={{
-                    y: -10,
+                    y: -8,
                   }}
-                  className="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 text-center border border-gray-100 hover:border-red-500 transition-all duration-500 z-10"
+                  className="relative bg-white rounded-3xl border border-gray-200 hover:border-[#C8A24A] shadow-lg hover:shadow-2xl transition-all duration-500 p-8 text-center z-10"
                 >
 
                   {/* Number */}
 
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold shadow-lg">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-[#C8A24A] text-white font-bold flex items-center justify-center shadow-lg">
 
                     {step.id}
 
@@ -81,15 +81,15 @@ const Process = () => {
 
                   {/* Icon */}
 
-                  <div className="mt-6 w-20 h-20 rounded-full bg-blue-950 mx-auto flex items-center justify-center group">
+                  <div className="mt-6 w-20 h-20 rounded-2xl bg-[#EEF4FB] mx-auto flex items-center justify-center">
 
-                    <Icon className="text-white text-3xl" />
+                    <Icon className="text-4xl text-[#0B2341]" />
 
                   </div>
 
                   {/* Title */}
 
-                  <h3 className="mt-8 text-2xl font-bold text-blue-950">
+                  <h3 className="mt-7 text-2xl font-bold text-[#0B2341]">
 
                     {step.title}
 
@@ -97,7 +97,7 @@ const Process = () => {
 
                   {/* Text */}
 
-                  <p className="mt-4 text-gray-600 leading-7">
+                  <p className="mt-4 text-gray-600 leading-8">
 
                     {step.text}
 
@@ -113,37 +113,49 @@ const Process = () => {
 
         </div>
 
-        {/* Bottom CTA */}
+        {/* CTA */}
 
         <motion.div
           {...fadeUp}
-          className="mt-24 bg-blue-950 rounded-3xl p-10 lg:p-14 text-center text-white shadow-2xl"
+          className="mt-20 lg:mt-24 bg-[#0B2341] rounded-[32px] overflow-hidden shadow-2xl"
         >
 
-          <h2 className="text-3xl lg:text-4xl font-bold">
+          <div className="px-6 sm:px-10 lg:px-16 py-12 lg:py-16 text-center">
 
-            Ready To Simplify Your Accounting?
+            <span className="inline-block px-4 py-2 rounded-full bg-[#C8A24A]/20 text-[#C8A24A] text-sm font-semibold uppercase tracking-wider">
 
-          </h2>
+              Let's Get Started
 
-          <p className="mt-5 text-gray-300 max-w-2xl mx-auto leading-8">
+            </span>
 
-            Let our experienced team handle your bookkeeping,
-            tax filing and accounting while you focus on growing
-            your business.
+            <h2 className="mt-6 text-3xl lg:text-5xl font-bold text-white leading-tight">
 
-          </p>
+              Ready to Simplify
+              <br />
+              Your Accounting?
 
-          <Link
-  to="contact"
-  smooth={true}
-  duration={600}
-  offset={-80}
-  className="mt-10 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 mx-auto cursor-pointer transition-all duration-300 hover:scale-105 w-fit"
->
-  Book a Free Consultation
-  <FaArrowRight />
-</Link>
+            </h2>
+
+            <p className="mt-6 text-gray-300 max-w-2xl mx-auto leading-8 text-base sm:text-lg">
+
+              Whether you need bookkeeping, tax preparation or
+              complete accounting support, we're here to help
+              your business succeed.
+
+            </p>
+
+            <Link
+              to="contact"
+              smooth={true}
+              duration={600}
+              offset={-80}
+              className="inline-flex items-center justify-center gap-3 mt-10 bg-[#C8A24A] hover:bg-[#b7923f] text-[#0B2341] font-semibold px-8 py-4 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 shadow-lg"
+            >
+              Request Consultation
+              <FaArrowRight />
+            </Link>
+
+          </div>
 
         </motion.div>
 

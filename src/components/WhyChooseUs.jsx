@@ -1,34 +1,46 @@
 import { motion } from "framer-motion";
 import whyChooseUs from "../data/whyChooseUs";
+import { fadeUp } from "../utils/animation";
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-20 lg:py-28 bg-white">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
-        <div className="text-center mb-16">
+        {/* Heading */}
 
-          <span className="uppercase tracking-widest text-red-600 font-semibold">
+        <motion.div
+          {...fadeUp}
+          className="text-center max-w-3xl mx-auto"
+        >
+
+          <span className="uppercase tracking-[3px] text-[#C9A227] font-semibold text-sm">
+
             Why Choose Us
+
           </span>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-blue-950">
-            Why Businesses Trust
-            <br />
-            N.K.O Accounting
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F3B73] leading-tight">
+
+            Experience You Can Trust
+
           </h2>
 
-          <p className="mt-6 max-w-2xl mx-auto text-gray-600 leading-8">
-            We combine experience, technology and personalized service
-            to provide accounting solutions you can rely on.
+          <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
+
+            We deliver dependable accounting services backed by
+            professionalism, accuracy and personalized client support.
+
           </p>
 
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Cards */}
 
-          {whyChooseUs.map((item) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-16">
+
+          {whyChooseUs.map((item, index) => {
 
             const Icon = item.icon;
 
@@ -36,29 +48,36 @@ const WhyChooseUs = () => {
 
               <motion.div
                 key={item.id}
+                {...fadeUp}
+                transition={{
+                  duration: .5,
+                  delay: index * .1,
+                }}
                 whileHover={{
                   y: -10,
-                  scale: 1.03,
                 }}
-                transition={{
-                  duration: .3
-                }}
-                className="bg-white rounded-3xl shadow-lg p-8 text-center group hover:bg-blue-950 transition-all duration-500"
+                className="group bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-2xl hover:border-[#C9A227] transition-all duration-500 text-center"
               >
 
-                <div className="w-20 h-20 rounded-full bg-red-100 mx-auto flex items-center justify-center group-hover:bg-red-600 transition">
+                {/* Icon */}
 
-                  <Icon className="text-red-600 text-4xl group-hover:text-white transition"/>
+                <div className="mx-auto w-20 h-20 rounded-2xl bg-[#EEF4FB] flex items-center justify-center group-hover:bg-[#0F3B73] transition duration-500">
+
+                  <Icon className="text-4xl text-[#0F3B73] group-hover:text-[#C9A227] transition duration-500"/>
 
                 </div>
 
-                <h3 className="mt-8 text-2xl font-bold text-blue-950 group-hover:text-white">
+                {/* Title */}
+
+                <h3 className="mt-8 text-2xl font-bold text-[#0F3B73]">
 
                   {item.title}
 
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-7 group-hover:text-gray-300">
+                {/* Description */}
+
+                <p className="mt-5 text-gray-600 leading-8">
 
                   {item.text}
 
