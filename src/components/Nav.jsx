@@ -17,13 +17,9 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    if (nav) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = nav ? "hidden" : "auto";
 
     return () => {
       document.body.style.overflow = "auto";
@@ -39,11 +35,11 @@ const Nav = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 bg-white transition-shadow duration-500 ${
-        scrolled ? "shadow-lg py-3" : "shadow-sm py-5"
-      }`}
-    >
+   <header
+  className={`fixed top-0 left-0 w-full z-50 bg-blue-950 transition-all duration-500 ${
+    scrolled ? "shadow-xl py-3" : "py-5"
+  }`}
+>
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
 
         {/* Logo */}
@@ -52,13 +48,16 @@ const Nav = () => {
           to="home"
           smooth
           duration={500}
-          className="cursor-pointer flex items-center"
+          offset={-80}
+          className="cursor-pointer flex-shrink-0"
         >
-          <img
-            src={logo}
-            alt="N.K.O Accounting"
-            className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
-          />
+          <div className="bg-white rounded-xl p-2 shadow-md">
+            <img
+              src={logo}
+              alt="N.K.O Accounting"
+              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -75,8 +74,8 @@ const Nav = () => {
                 spy
                 duration={500}
                 offset={-90}
-                activeClass="text-[#C9A227]"
-                className="cursor-pointer font-medium text-[#0B1F3A] hover:text-[#C9A227] transition-all duration-300"
+                activeClass="text-[#C8A24A]"
+                className="cursor-pointer font-medium text-white hover:text-[#C8A24A] transition-all duration-300"
               >
                 {link.name}
               </Link>
@@ -93,16 +92,16 @@ const Nav = () => {
           href="https://wa.me/14166665694?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:flex items-center bg-[#0B1F3A] hover:bg-[#09172B] text-white px-6 py-3 rounded-xl transition duration-300 hover:scale-105"
+          className="hidden lg:flex items-center bg-[#C8A24A] hover:bg-[#b7923f] text-[#0B2341] px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1"
         >
           Schedule Consultation
         </a>
 
-        {/* Mobile Icon */}
+        {/* Mobile Menu Button */}
 
         <button
           onClick={() => setNav(true)}
-          className="lg:hidden text-3xl z-[70] text-[#0B1F3A]"
+          className="lg:hidden text-3xl text-white z-[70]"
         >
           <FaBars />
         </button>
@@ -114,7 +113,9 @@ const Nav = () => {
       <div
         onClick={() => setNav(false)}
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-all duration-500 lg:hidden ${
-          nav ? "opacity-100 visible z-[60]" : "opacity-0 invisible"
+          nav
+            ? "opacity-100 visible z-[60]"
+            : "opacity-0 invisible"
         }`}
       />
 
@@ -126,26 +127,30 @@ const Nav = () => {
         }`}
       >
 
-        {/* Header */}
+        {/* Mobile Header */}
 
         <div className="flex items-center justify-between px-6 py-5 border-b">
 
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-12 object-contain"
-          />
+          <div className="bg-white rounded-xl p-2 shadow-md">
+
+            <img
+              src={logo}
+              alt="N.K.O Accounting"
+              className="h-10 object-contain"
+            />
+
+          </div>
 
           <button
             onClick={() => setNav(false)}
-            className="text-3xl text-[#0B1F3A]"
+            className="text-3xl text-[#0B2341]"
           >
             <FaTimes />
           </button>
 
         </div>
 
-        {/* Links */}
+        {/* Mobile Links */}
 
         <ul className="mt-6">
 
@@ -160,8 +165,8 @@ const Nav = () => {
                 duration={500}
                 offset={-90}
                 onClick={() => setNav(false)}
-                activeClass="bg-[#EEF4FB] text-[#C9A227]"
-                className="block px-8 py-5 text-lg font-semibold text-[#0B1F3A] hover:bg-[#EEF4FB] transition cursor-pointer"
+                activeClass="bg-[#EEF4FB] text-[#C8A24A]"
+                className="block px-8 py-5 text-lg font-semibold text-[#0B2341] hover:bg-[#EEF4FB] transition-all duration-300 cursor-pointer"
               >
                 {link.name}
               </Link>
@@ -172,7 +177,7 @@ const Nav = () => {
 
         </ul>
 
-        {/* Button */}
+        {/* Mobile CTA */}
 
         <div className="px-8 mt-8">
 
@@ -180,7 +185,7 @@ const Nav = () => {
             href="https://wa.me/14166665694?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-center bg-[#0B1F3A] hover:bg-[#09172B] text-white py-4 rounded-xl font-semibold transition duration-300"
+            className="block text-center bg-[#C8A24A] hover:bg-[#b7923f] text-[#0B2341] py-4 rounded-xl font-semibold transition-all duration-300"
           >
             Schedule Consultation
           </a>
