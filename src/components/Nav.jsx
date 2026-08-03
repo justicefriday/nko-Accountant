@@ -35,9 +35,9 @@ const Nav = () => {
   ];
 
   return (
-   <header
-  className={`fixed top-0 left-0 w-full z-50 bg-blue-950 transition-all duration-500 ${
-    scrolled ? "shadow-xl py-3" : "py-5"
+<header
+  className={`fixed top-0 left-0 w-full z-50 bg-white border-b border-slate-100 transition-all duration-500 ] ${
+    scrolled ? "shadow-lg py-3" : "py-5"
   }`}
 >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -51,7 +51,7 @@ const Nav = () => {
           offset={-80}
           className="cursor-pointer flex-shrink-0"
         >
-          <div className="bg-white rounded-xl p-2 shadow-md">
+          <div >
             <img
               src={logo}
               alt="N.K.O Accounting"
@@ -75,7 +75,8 @@ const Nav = () => {
                 duration={500}
                 offset={-90}
                 activeClass="text-[#C8A24A]"
-                className="cursor-pointer font-medium text-white hover:text-[#C8A24A] transition-all duration-300"
+
+                className="cursor-pointer font-medium text-[#071B34] hover:text-[#C8A24A] transition-all duration-300"
               >
                 {link.name}
               </Link>
@@ -87,12 +88,11 @@ const Nav = () => {
         </ul>
 
         {/* Desktop Button */}
-
         <a
           href="https://wa.me/14166665694?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:flex items-center bg-[#C8A24A] hover:bg-[#b7923f] text-[#0B2341] px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1"
+          className="hidden lg:flex items-center bg-[#0B2341] hover:bg-[#b7923f] text-[#C8A24A] px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1"
         >
           Schedule Consultation
         </a>
@@ -101,7 +101,7 @@ const Nav = () => {
 
         <button
           onClick={() => setNav(true)}
-          className="lg:hidden text-3xl text-white z-[70]"
+          className="lg:hidden text-3xl text-[#0B2341] z-[70]"
         >
           <FaBars />
         </button>
@@ -199,3 +199,6 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+
