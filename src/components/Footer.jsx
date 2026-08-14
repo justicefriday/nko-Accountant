@@ -197,7 +197,7 @@ const Footer = () => {
                 <FaPhoneAlt className="text-[#C8A24A] mt-1 flex-shrink-0"/>
 
                 <span className="text-gray-300">
-                  +1 (416) 666-5694
+                  +1 289-803-6886
                 </span>
 
               </div>
@@ -207,7 +207,7 @@ const Footer = () => {
                 <FaEnvelope className="text-[#C8A24A] mt-1 flex-shrink-0"/>
 
                 <span className="text-gray-300">
-                  info@nkoaccounting.ca
+                  Nk@nkoaccounting.com
                 </span>
 
               </div>

@@ -13,12 +13,12 @@ const Contact = () => {
     {
       icon: <FaPhoneAlt />,
       title: "Phone",
-      text: "+1 (416) 666-5694",
+      text: "+1 289-803-6886",
     },
     {
       icon: <FaEnvelope />,
       title: "Email",
-      text: "info@nkoaccounting.ca",
+      text: "Nk@nkoaccounting.com",
     },
     {
       icon: <FaMapMarkerAlt />,

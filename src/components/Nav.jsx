@@ -89,7 +89,7 @@ const Nav = () => {
 
         {/* Desktop Button */}
         <a
-          href="https://wa.me/14166665694?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
+          href="https://wa.me/12898036886?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:flex items-center bg-[#0B2341] hover:bg-[#b7923f] text-[#C8A24A] px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1"
@@ -182,7 +182,7 @@ const Nav = () => {
         <div className="px-8 mt-8">
 
           <a
-            href="https://wa.me/14166665694?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
+            href="https://wa.me/12898036886?text=Hello,%20I%20would%20like%20to%20schedule%20a%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center bg-[#C8A24A] hover:bg-[#b7923f] text-[#0B2341] py-4 rounded-xl font-semibold transition-all duration-300"
