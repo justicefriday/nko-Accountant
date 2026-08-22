@@ -267,15 +267,16 @@ const Services = () => {
           </span>
 
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F3B73] leading-tight">
-            Accounting Solutions
+            Accounting Services that
+
             <br />
-            Built Around Your Business
+            Meet Your Business Needs
           </h2>
 
           <p className="mt-5 text-gray-600 leading-7 text-base sm:text-lg">
-            We provide reliable accounting, tax and financial management
-            services designed to keep your business organized, compliant
-            and financially prepared for growth.
+            From bookkeeping to tax planning, we provide reliable financial services to individuals
+            and organizations aimed at maximizing growth While staying compliant
+            
           </p>
         </motion.div>
 
