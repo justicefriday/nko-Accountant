@@ -275,7 +275,7 @@ const Services = () => {
 
           <p className="mt-5 text-gray-600 leading-7 text-base sm:text-lg">
             From bookkeeping to tax planning, we provide reliable financial services to individuals
-            and organizations aimed at maximizing growth while staying compliant
+            and organizations aimed at maximizing growth while staying compliant.
             
           </p>
         </motion.div>

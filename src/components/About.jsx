@@ -128,18 +128,25 @@ const About = () => {
 
             <p className="mt-8 text-gray-600 leading-8">
 
-              N.K.O Accounting Professional Corporation provides reliable
-              bookkeeping, tax preparation and financial reporting services
-              designed to help individuals and businesses stay compliant,
-              organized and financially confident.
+              N.K.O Accounting Professional Corporation is tailored to meet
+              the accounting needs of our clients.Our practice is geared towards eliminating excesses
+              and reducing downtime by eradicating minimal disruption to your business. 
+              
 
             </p>
 
             <p className="mt-5 text-gray-600 leading-8">
 
-              We believe every client deserves personalized service,
-              accurate reporting and professional advice that supports
-              long-term financial success.
+             Our personnel include accountants with vast knowledge in accounts payable, receivable and a
+            CPA in Property Accounting with experiences that span various aspects of the business
+              including Operations to ensure proper coding and adjustment of payables.
+              {/* accounts receivable
+          through receiving and applications of receivable to the proper accounts, posting journal entries,
+          amortization of fixed asset, common area and realty tax recoveries to Month end, Quarter Ends,
+        and yearly Budgets. */}
+          Our accountant has over 15 years property accounting experience and have worked for the major
+      corporations like Knightstone Capital Management, GE Finance, Scotia Bank Plaza, Bentall
+      Kennedy, Arcturus Property Management and Cadillac Fairview Corporation.
 
             </p>
 
