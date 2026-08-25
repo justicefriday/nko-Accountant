@@ -92,7 +92,7 @@ const About = () => {
           </h3>
 
           <p className="text-sm text-gray-500 mt-1 leading-6">
-            Delivering accurate accounting and tax solutions with integrity.
+            Delivering accurate Accounting and tax solutions with integrity.
           </p>
 
         </div>
@@ -122,28 +122,25 @@ const About = () => {
               Helping Businesses
               <br />
 
-              Grow With Confidence
+             Build Lasting Growth
 
             </h2>
 
             <p className="mt-8 text-gray-600 leading-8">
 
-              N.K.O Accounting Professional Corporation is tailored to meet
-              the accounting needs of our clients.Our practice is geared towards eliminating excesses
-              and reducing downtime by eradicating minimal disruption to your business. 
+              N.K.O Accounting Professional Corporation is tailored to meet the accounting needs of our clients.
+              Our practice is geared toward eliminating inefficiencies, reducing downtime,
+              and minimizing disruptions to your business.
               
 
             </p>
 
             <p className="mt-5 text-gray-600 leading-8">
 
-             Our personnel include accountants with vast knowledge in accounts payable, receivable and a
-            CPA in Property Accounting with experiences that span various aspects of the business
+              Our personnel include accountants with vast knowledge in accounts payable, receivable and
+              with experiences that span various aspects of the business
               including Operations to ensure proper coding and adjustment of payables.
-              {/* accounts receivable
-          through receiving and applications of receivable to the proper accounts, posting journal entries,
-          amortization of fixed asset, common area and realty tax recoveries to Month end, Quarter Ends,
-        and yearly Budgets. */}
+              
           Our accountant has over 15 years property accounting experience and have worked for the major
       corporations like Knightstone Capital Management, GE Finance, Scotia Bank Plaza, Bentall
       Kennedy, Arcturus Property Management and Cadillac Fairview Corporation.

@@ -10,25 +10,25 @@ const whyChooseUs = [
     id: 1,
     icon: FaShieldAlt,
     title: "Accuracy & Compliance",
-    text: "Every report and tax filing is prepared carefully to meet regulatory requirements and minimize costly errors.",
+    text: "Detailed analysis is given to each  information to provide reports that meet Accounting guidelines.",
   },
   {
     id: 2,
     icon: FaBolt,
     title: "Fast Turnaround",
-    text: "We respond quickly and deliver bookkeeping and tax services on time, every time.",
+    text: "We work to ensure all deadlines are maintained while maintaining accuracy.",
   },
   {
     id: 3,
     icon: FaHandshake,
     title: "Trusted Partnership",
-    text: "We build lasting relationships through honesty, transparency and dependable financial guidance.",
+    text: "We work together with you to ensure transparency and build a long lasting relationship.",
   },
   {
     id: 4,
     icon: FaChartLine,
     title: "Business Growth",
-    text: "Beyond accounting, we provide insights that help you improve cash flow and make smarter business decisions.",
+    text: "We seek to provide peace of mind to what is most important to the success of your business - your books."
   },
 ];
 

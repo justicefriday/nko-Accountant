@@ -27,15 +27,16 @@ const Process = () => {
 
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
 
-            A Simple Process.
+            Transparent Process
             <br />
-            Professional Results.
+            
+            Long lasting outcome
 
           </h2>
 
           <p className="mt-6 text-gray-600 text-base sm:text-lg leading-8">
 
-            We've simplified our workflow to make your accounting
+            We've simplified our workflow to make your Accounting
             experience straightforward, transparent and stress-free.
 
           </p>
@@ -139,7 +140,7 @@ const Process = () => {
             <p className="mt-6 text-gray-300 max-w-2xl mx-auto leading-8 text-base sm:text-lg">
 
               Whether you need bookkeeping, tax preparation or
-              complete accounting support, we're here to help
+              complete Accounting support, we're here to help
               your business succeed.
 
             </p>

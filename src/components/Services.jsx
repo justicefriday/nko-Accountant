@@ -267,7 +267,7 @@ const Services = () => {
           </span>
 
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F3B73] leading-tight">
-            Accounting Services that
+            Accounting Services That
 
             <br />
             Meet Your Business Needs

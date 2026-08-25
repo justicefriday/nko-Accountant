@@ -23,14 +23,14 @@ const WhyChooseUs = () => {
 
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F3B73] leading-tight">
 
-            Experience You Can Trust
+            Service You Can Trust
 
           </h2>
 
           <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
 
-            We deliver dependable accounting services backed by
-            professionalism, accuracy and personalized client support.
+            We provide timely, accurate and reliable information
+            that helps you see and understand your business in a snapshot.
 
           </p>
 

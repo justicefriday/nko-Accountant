@@ -164,7 +164,7 @@ const Hero = () => {
 
             <h1 className="mt-8 text-[#081F4D] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
 
-              Professional Accounting
+              Reliable Accounting 
 
               <span className="block text-[#C8A348]">
                 Solutions
@@ -176,9 +176,9 @@ const Hero = () => {
 
             <p className="mt-8 max-w-xl text-gray-600 text-lg leading-8">
 
-              Helping businesses and individuals stay financially organized through
-              bookkeeping, tax preparation, financial reporting and trusted
-              professional advice tailored to their goals.
+              Dedicated to providing optimum services to clients.
+              Helping business achieve  immediate and long-term Accounting
+              needs using our unique strengths to attain that goal.
 
             </p>
 
@@ -291,7 +291,7 @@ const Hero = () => {
 
                 <p className="text-sm text-gray-600 mt-1">
 
-                  Delivering trusted accounting services across Canada.
+                  Delivering trusted Accounting services across Canada.
 
                 </p>
 

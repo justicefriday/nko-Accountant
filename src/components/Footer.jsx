@@ -95,7 +95,7 @@ const Footer = () => {
 
             <p className="mt-6 text-gray-300 leading-8">
 
-              Professional bookkeeping, taxation and accounting
+              Professional bookkeeping, taxation and Accounting
               services helping businesses and individuals stay
               financially organized and compliant.
 

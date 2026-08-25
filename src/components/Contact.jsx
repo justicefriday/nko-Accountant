@@ -61,7 +61,7 @@ const Contact = () => {
 
           <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
 
-            Whether you need bookkeeping, tax services or accounting
+            Whether you need bookkeeping, tax services or Accounting
             support, our team is ready to help.
 
           </p>
@@ -148,7 +148,7 @@ const Contact = () => {
 
               <p className="mt-4 text-gray-600 leading-7">
 
-                Complete the form below and one of our accounting
+                Complete the form below and one of our Accounting
                 professionals will contact you shortly.
 
               </p>
