@@ -22,7 +22,7 @@ const process = [
     id: 3,
     icon: FaCalculator,
     title: "Professional Processing",
-    text: "Armed with a good understanding of your business processes, we will build and advise solutions precise to your business. We will advise you of all steps within each solution that will be delivered to produce the desired result.",
+    text: "With a clear understanding of your business processes, we will design and recommend solutions tailored to your specific needs. For each solution, we will outline the steps required to achieve the desired result and provide clear guidance throughout the delivery process of our services.",
   },
   {
     id: 4,
