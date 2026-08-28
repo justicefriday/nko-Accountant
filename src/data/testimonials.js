@@ -1,52 +1,38 @@
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    company: "Small Business Owner",
-    image: "https://i.pravatar.cc/150?img=32",
+    name: "NG",
+    company: "Healthcare Worker",
     review:
-      "N.K.O Accounting has transformed how we manage our finances. Their bookkeeping and tax services are always accurate and delivered on time.",
+      "Excellent service. NKO and team are responsive and easy to communicate with.",
   },
   {
     id: 2,
-    name: "Michael Brown",
-    company: "Restaurant Owner",
-    image: "https://i.pravatar.cc/150?img=15",
+    name: "Abigail",
+    company: "Freelance",
     review:
-      "Professional, reliable and always available to answer questions. I highly recommend their accounting services.",
+      "NKO simplified my bookkeeping (Business & Personal). Glad to recommend them to anyone.",
   },
   {
     id: 3,
-    name: "Emily Wilson",
-    company: "Freelancer",
-    image: "https://i.pravatar.cc/150?img=45",
+    name: "Raymond",
+    company: "Small Business Owner",
     review:
-      "Tax season used to be stressful until I started working with N.K.O Accounting. They made everything simple and easy.",
+      "Committed and personalized bookkeeping you can rely on.",
   },
-
-   {
+  {
     id: 4,
-    name: "John Smith",
-    company: "ABC Construction",
+    name: "Marla",
+    company: "Educator",
     review:
-      "Excellent bookkeeping and tax services. Professional, responsive and always accurate.",
-    image: "https://i.pravatar.cc/150?img=60",
+      "With NKO Accounting, you can take your hands off your books with confidence.",
   },
   {
     id: 5,
-    name: "Sarah Johnson",
-    company: "Maple Retail",
+    name: "Priscilla",
+    company: "Business Owner",
     review:
-      "Their team simplified our accounting process and saved us valuable time every month.",
-    image:"https://i.pravatar.cc/150?img=65",
-  },
-  {
-    id: 6,
-    name: "David Brown",
-    company: "Brown Logistics",
-    review:
-      "Highly recommended. Reliable, knowledgeable and easy to work with.",
-    image: "https://i.pravatar.cc/150?img=55",
+      "Hard working, dedicated team!",
   },
 ];
 

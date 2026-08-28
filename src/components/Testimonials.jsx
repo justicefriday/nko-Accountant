@@ -113,43 +113,32 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-16 lg:py-20 bg-[#F8FAFC] overflow-hidden"
+      className="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
-
         <motion.div
           {...fadeUp}
           className="text-center max-w-3xl mx-auto"
         >
-
-          <span className="uppercase tracking-[3px] text-[#C8A24A] font-semibold text-sm">
-
+          <span className="uppercase tracking-[3px] text-[#C8A24A] font-semibold text-xs sm:text-sm">
             Testimonials
-
           </span>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight">
-
+          <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B2341] leading-tight px-2">
             What Our Clients Say
-
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-8 text-base sm:text-lg">
-
+          <p className="mt-4 sm:mt-6 text-gray-600 leading-7 sm:leading-8 text-sm sm:text-base lg:text-lg px-2">
             Our commitment to professionalism, accuracy and
             exceptional client service has earned the trust of
             businesses and individuals across Canada.
-
           </p>
-
         </motion.div>
 
         {/* Slider */}
-
-       <div className="mt-10 lg:mt-12">
-
+        <div className="mt-8 sm:mt-10 lg:mt-12">
           <Swiper
             modules={[Autoplay, Pagination]}
             autoplay={{
@@ -159,108 +148,79 @@ const Testimonials = () => {
             pagination={{
               clickable: true,
             }}
-            spaceBetween={25}
+            spaceBetween={20}
             breakpoints={{
               0: {
                 slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
               },
               768: {
                 slidesPerView: 2,
+                spaceBetween: 24,
               },
               1200: {
                 slidesPerView: 3,
+                spaceBetween: 25,
               },
             }}
+            className="!pb-12"
           >
-
             {testimonials.map((item) => (
-
-              <SwiperSlide
-                key={item.id}
-                className="h-auto"
-              >
-
+              <SwiperSlide key={item.id} className="h-auto">
                 <motion.div
-                  whileHover={{
-                    y: -8,
-                  }}
-                  transition={{
-                    duration: .3,
-                  }}
-                 className="bg-white rounded-3xl border border-gray-200 hover:border-[#C8A24A] shadow-lg hover:shadow-2xl p-6 lg:p-7 h-full flex flex-col">
-                  {/* Quote */}
-
-                  <div className="w-14 h-14 rounded-2xl bg-[#EEF4FB] flex items-center justify-center">
-
-                    <FaQuoteLeft className="text-[#C8A24A] text-2xl"/>
-
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 hover:border-[#C8A24A] shadow-lg hover:shadow-2xl p-5 sm:p-6 lg:p-7 h-full flex flex-col"
+                >
+                  {/* Quote icon */}
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#EEF4FB] flex items-center justify-center flex-shrink-0">
+                    <FaQuoteLeft className="text-[#C8A24A] text-xl sm:text-2xl" />
                   </div>
 
                   {/* Stars */}
-
-                   <div className="flex gap-1 mt-4">
-
+                  <div className="flex gap-1 mt-3 sm:mt-4">
                     {[...Array(5)].map((_, index) => (
-
                       <FaStar
                         key={index}
-                        className="text-[#C8A24A]"
+                        className="text-[#C8A24A] text-sm sm:text-base"
                       />
-
                     ))}
-
                   </div>
 
                   {/* Review */}
-
-                 <p className="mt-4 text-gray-600 leading-7 italic flex-grow">
-
+                  <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed sm:leading-7 italic flex-grow text-sm sm:text-base">
                     "{item.review}"
-
                   </p>
 
                   {/* Divider */}
-
-                  <div className="w-full h-px bg-gray-200 my-6"></div>
+                  <div className="w-full h-px bg-gray-200 my-5 sm:my-6"></div>
 
                   {/* Client */}
-
-                  <div className="flex items-center gap-4">
-
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-16 h-16 rounded-full border-4 border-[#EEF4FB] object-cover flex-shrink-0"
-                    />
-
-                    <div>
-
-                      <h4 className="font-bold text-[#0B2341]">
-
-                        {item.name}
-
-                      </h4>
-
-                      <p className="text-sm text-[#C8A24A] font-medium mt-1">
-
-                        {item.company}
-
-                      </p>
-
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0B2341] flex items-center justify-center flex-shrink-0 border-4 border-[#EEF4FB]">
+                      <span className="text-white font-bold text-sm sm:text-base">
+                        {item.name.charAt(0)}
+                      </span>
                     </div>
 
+                    <div className="min-w-0">
+                      <h4 className="font-bold text-[#0B2341] text-sm sm:text-base truncate">
+                        {item.name}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-[#C8A24A] font-medium mt-0.5 truncate">
+                        {item.company}
+                      </p>
+                    </div>
                   </div>
-
                 </motion.div>
-
               </SwiperSlide>
-
             ))}
-
           </Swiper>
-
         </div>
-
       </div>
     </section>
   );

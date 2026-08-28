@@ -134,7 +134,7 @@ const services = [
     description:
       "We manage CAM and realty tax recovery calculations, tenant billing adjustments and reconciliation schedules.",
     details: [
-      "Prepare annual operating cost and realty tax cost calculations.",
+      "Prepare annual operating cost and Realty Tax cost calculations.",
       "Prepare corresponding tenant billing adjustments.",
       "Analyze variances for CAM and tax recoveries.",
       "Update tenant reconciliation schedules.",

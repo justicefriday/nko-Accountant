@@ -16,7 +16,7 @@ const whyChooseUs = [
     id: 2,
     icon: FaBolt,
     title: "Fast Turnaround",
-    text: "We work to ensure all deadlines are maintained while maintaining accuracy.",
+    text: "We work to ensure all deadlines are met while maintaining accuracy.",
   },
   {
     id: 3,
