@@ -35,9 +35,8 @@ const Hero = () => {
             </h1>
 
             <p className="mt-6 sm:mt-8 max-w-xl text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-8">
-              Dedicated to providing optimum services to clients.
-              Helping business achieve immediate and long-term Accounting
-              needs using our unique strengths to attain that goal.
+              We are dedicated to delivering exceptional service to our clients, helping businesses meet both immediate
+              and long-term accounting needs through our unique expertise.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-5">

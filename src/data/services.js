@@ -132,7 +132,7 @@ const services = [
     title: "Common Area Maintenance (CAM) & Realty Tax Recoveries",
     icon: FaBuilding,
     description:
-      "We manage CAM and realty tax recovery calculations, tenant billing adjustments and reconciliation schedules.",
+      "We manage CAM and Realty Tax recovery calculations, tenant billing adjustments and reconciliation schedules.",
     details: [
       "Prepare annual operating cost and Realty Tax cost calculations.",
       "Prepare corresponding tenant billing adjustments.",

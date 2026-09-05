@@ -110,7 +110,7 @@ const About = () => {
             </p>
 
             <p className="mt-4 sm:mt-5 text-gray-600 leading-relaxed sm:leading-8 text-sm sm:text-base">
-              Our personnel include accountants with vast knowledge in accounts payable, receivable and and a
+              Our personnel include accountants with vast knowledge in accounts payable, receivable and a
             CPA
               with experiences that span various aspects of the business
               including Operations to ensure proper coding and adjustment of payables.
